@@ -24,11 +24,8 @@
 \usepackage{resume}
 
 
-
-
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
-
 
 % title on top of the document
 \maintitle{Nathaniel Waisbrot}{}{Last update on \today}
@@ -42,224 +39,125 @@
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:resume@waisbrot.net}{resume@waisbrot.net} \sbull
 \textsmaller{p} 410-369-8043 \sbull
-\href{http://www.linkedin.com/in/waisbrot}{www.linkedin.com/in/waisbrot}
+\href{https://www.linkedin.com/in/waisbrot}{www.linkedin.com/in/waisbrot}
 \\
 448 Broadway \#2, Cambridge, MA, 02138, USA
 
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
-\roottitle{Summary}  % a root section title
-
-\vspace{-1.3em}  % some vertical spacing
-\begin{multicols}{2}  % open a multicolumn environment
-\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
-\\
-\\
-At the age of seven (1989) Cies wrote his first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later he attended a conference on an emerging new technology, the Internet, at the Erasmus University from which he would graduate 16 years later.
-
-After being introduced to the open source movement in 1997, he taught himself a variety of skills including system administration and programming (Bash, Python, Ruby \& \CPP).  By 2002 he got his pet project \acr{KT}urtle ---a zero-entry-barrier programming environment--- included into \acr{KDE}'s \emph{edu} module, and thereby almost every Linux distribution.
-
-From 2003 to 2007 he studied at the Erasmus University Rotterdam and graduated in \emph{Business and Computer Science} (one curriculum).  After graduation he travelled Europe and Asia during a two year sabbatical, on which he ``hustled'' several IT gigs (see experiences below) to extend the journey.
-\end{multicols}
-
-
-\spacedhrule{0em}{-0.4em}
-
-\roottitle{Experience}
+\roottitle{Work}
 
 \headedsection  % sets the header for the section and includes any subsections
-  {\href{http://www.hoppinger.com}{Hoppinger}}
-  {\textsc{Rotterdam, The Netherlands}} {%
+  {\textbf{\href{https://www.whoop.com}{WHOOP}}}
+  {\textsc{Boston, Massachusetts}} {%
+  \\A wearable and data analysis platform allowing elite athletes to optimize their training schedules.
   \headedsubsection
-    {Head of Technology}
-    {Apr \apo12 -- present}
-    {\bodytext{Hoppinger is an open source minded ``full-service'' internet agency.  Reporting directly to the general director, Marijn Bom. In charge of drawing and carrying out the vision for the tech department consisting of 15 developers.  \\
+    {Team Lead}
+    {November 2015 -- Present}
+    {\bodytext{Supervised two other full-time software engineers on the back-end team, working with the Product team to prioritize and groom new features. 
+
+Managed a summer intern (planned a summer project, lead the hiring process, supervised the project) integrating multiple external services (SalesForce, Shopify, GitHub, etc) with our own internal services.
+
+Architected our transition to Kubernetes (from a hand-managed Ansible/Docker setup) and expanded our use of PostgreSQL.}}
+
+  \headedsubsection
+    {Sr Software Engineer}
+    {June 2014 -- November 2015}
+    {\bodytext{Architected and authored most of the server-side services and infrastructure. The WHOOP client apps send frequent bursts of biometric data for near-real-time analysis and send and receive metadata describing users' daily activity and performance. The server is composed of several in-house services (REST server, real-time data processing, slower data processing, time-based actions, etc) and several AWS services (Kinesis, SQS, SNS, RDS PostgreSQL). My work has primarily been in Python, Erlang, and JavaScript.\\
+
+Some major technology choices I made: creating a suite of end-to-end tests, discarding Chef as a configuration management system, introducing Docker, introducing Erlang, replacing OpenTSDB with PostgreSQL, introducing Amazon Kinesis.}}
+}
+
+\headedsection
+  {\textbf{\href{https://www.imprivata.com}{Imprivata}}}
+  {\textsc{Lexington, Massachusetts}} {%
+  \\Doctor-facing software for hospitals
+  \headedsubsection
+    {Sr Software Engineer}
+    {August 2013 -- June 2014}
+    {\bodytext{Back-end engineer for Cortext, a HIPAA-compliant cloud-based messaging system. Designed and wrote the message alert sub-system. Data-mined customer usage. Spearheaded the addition of regression tests, using a local VM to allow the system to be tested with minimal changes to the code-base. Performed auxilary ops tasks on a VPC of 50+ EC2 instances.}}
+}
+
+\headedsection
+  {\textbf{\href{http://www.highfleet.com}{HIGHFLEET}}}
+  {\textsc{Baltimore, Maryland}} {%
+  \\Databases with an inference engine
+  \headedsubsection
+    {Software Engineer}
+    {August 2010 -- August 2013}
+    {\bodytext{Enhanced Highfleet's deductive database system: wrote builtin functions for the logic programming language, improved communication with SQL-based back-ends, debugged query plans, helped write a new ANTLR-based language parser. Part of a very small development team, extremely self- motivated; most weeks consisted of coming up with appropriate enhancement or debugging tasks and then executing those.
     
-    Streamlined datacenter operations with Puppet, introduced Rails for custom web-app development and Capistrano for deployment automation.  Intimately involved with the software architecture of all technically challenging projects.}}
-}
-
-\headedsection  % sets the header for a subsection and contains usually body text
-  {\href{http://www.hro.nl}{HRO} (Rotterdam University of Applied Science)}
-  {\textsc{Rotterdam, The Netherlands}} {%
-  \headedsubsection
-    {Guest Lecturer}
-    {Sep \apo12 -- present}
-    {\bodytext{Introductory lecture on history of software development and open source for 1\textsuperscript{st} year CS students.}}
+Primary technical contact for customers: wrote custom GUIs on demand for customers, wrote internal tools to support ontologists, communicated extensively with customers. Sold a key customer a 50\% increase in their contract, then produced software to fulfill the new requirements.}}
 }
 
 \headedsection
-  {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
-  {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
-
-  \headedsubsection
-    {\acr{IT} Consultant}
-    {Nov \apo08 -- Feb \apo09}
-    {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. Assessed their software development team and methodologies, trained their developers and build several web applications.  One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
-
-  \headedsubsection
-    {\acr{IT} \& Strategy Consultant}
-    {Jan \apo10 -- Aug \apo11}
-    {\bodytext{Called in to solve several technical challenges and look at potential growth strategies for \href{http://www.mostfit.org}{Mostfit}.}}
-
-  \headedsubsection
-    {CTO}
-    {Oct \apo11 -- Feb \apo12}
-    {\bodytext{Proudly joined the \acr{C}-family of Intellicap's software division, ISTPL, to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.  Contracts got terminated half a year later due to investment issues.}}
-}
-
-\headedsection
-  {\href{http://www.zarafa.com}{Zarafa}}
-  {\textsc{Delft, The Netherlands}} {%
-  \headedsubsection
-    {\acr{QA} \& Release Manager}
-    {Dec \apo09 -- Jan \apo11}
-    {\bodytext{Zarafa might be the fastest growing open source product company in Europe, making a drop-in replacement for MS Exchange.  Reported directly to the \acr{CEO}, Brian Josef, and worked closely with the \acr{CTO}, Steve Hardy.  In charge of the 6 men strong QA department.  Established test automation and continuous integration.  Architected and implemented an all-integrated documentation and translation system that employed community effort.  Got sent to India to analyse and streamline their outsourced operations.}}
-}
-
-\headedsection
-  {\href{http://www.dharmapublishing.com}{Dharma Publishing}}
-  {\textsc{near San Francisco (\acr{CA}), \acr{USA}}} {%
-  \headedsubsection
-    {\acr{IT} Consultant}
-    {Nov \apo09 -- Dec \apo09}
-    {\bodytext{Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organisation that helps to preserve Tibetan Buddhism and culture. Built their \href{http://www.dharmapublishing.com}{web shop}, and moved their digital content sales to SaaS applications.}}
-}
-
-\headedsection
-  {\href{http://www.kde.org}{KDE}}
-  {\href{http://edu.kde.org/kturtle}{edu.kde.org/kturtle}} {%
+  {\textbf{Lockheed Martin} contracted to the \textbf{\href{https://www.arl.army.mil/www/default.cfm}{Army Research Laboratory}}}
+  {\textsc{Adelphi, Maryland}} {%
   \headedsubsection
     {Software Engineer}
-    {Dec \apo03 -- present}
-    {\bodytext{\acr{KT}urtle is an educational programming environment that simplifies learning the basics of programming.  \acr{KT}urtle is intended as a gift to future generations:\ a simple environment to get started with programming.  In 2003 \acr{KT}urtle got admitted to the \acr{KDE} project.}}
+    {Feburary 2009 -- August 2010}
+    {\bodytext{Integrated open-source scientific visualization and modeling software packages into a single instal- lation for DoD supercomputer users. Assisted ARL scientists in adapting their code to execute in parallel, for better performance on supercomputers. Updated codes to run on new systems and architectures.
+    
+Granted DoD Top Secret clearance and worked in a classified environment.}}
 }
 
-\headedsection
-  {\href{http://truetopiaproject.org}{Truetopia Project}}
-  {\href{http://truetopiaproject.org}{truetopiaproject.org}} {%
-  \headedsubsection
-    {Initiator}
-    {Nov \apo07 -- Apr \apo10}
-    {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities.  It provides a workflow for collaborative problem identification and solution design.}}
-}
+\spacedhrule{0.5em}{-0.4em}
 
-\headedsection
-  {\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
-  {\textsc{Bangkok, Thailand}} {%
-  \headedsubsection
-    {Guest Lecturer}
-    {Sep \apo09}
-    {\bodytext{Invited by Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens for two guest lectures:\ the open source movement and the semantic web.}}
-}
-
-\headedsection
-  {\href{http://www.opendream.th}{Opendream}}
-  {\textsc{Bangkok, Thailand}} {%
-  \headedsubsection
-    {\acr{IT} Consultant}
-    {Aug \apo09 -- Sep \apo09}
-    {\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming.  Coached their development team on system design, Ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
-}
-
-\headedsection
-  {\href{http://www.commuun.nl}{Commuun}}
-  {\textsc{Rotterdam, The Netherlands}} {%
-  \headedsubsection
-    {Senior Visionary}
-    {Jul \apo06 -- Sep \apo09}
-    {\bodytext{Set up the technical infrastructure, defined the core competences and created a brand together with Peter Duijnstee (the proprietor of Commuun).  Then collaborated on several web applications (all Rails apps) within the context of his company.}}
-}
-
-\headedsection
-  {\href{http://www.eur.nl}{Erasmus University Rotterdam}}
-  {\textsc{Rotterdam, The Netherlands}} {%
-  \headedsubsection
-    {Guest Lecturer}
-    {Jul \apo06 -- Jul \apo09}
-    {\bodytext{Conducted a guest lecture on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.}}
-}
-
-%\headedsection
-%  {LIP Automatisering}
-%  {\textsc{Breda, The Netherlands}} {%
-%  \headedsubsection
-%    {Software Auditor}
-%    {Sep \apo06}
-%    {\bodytext{Audited their flag ship product \emph{\acr{LIP} Suite}:\ an %\acr{ERP} solution for construction companies.}}
-%}
-
-\headedsection
-  {\href{http://www.thehealthagency.com}{The Health Agency}}
-  {\textsc{Delft \& Rotterdam, The Netherlands}} {%
-
-  \headedsubsection
-    {Software Engineer}
-    {Jun \apo05 -- Feb \apo06}
-    {\bodytext{Worked on their CMS (written in Python and uses Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and Twisted).}}
-
-  \headedsubsection
-    {Software Auditor}
-    {Dec \apo06}
-    {\bodytext{Assessed their Python/Zope/\acr{Z}o\acr{DB}-based web framework re-engineering project.}}
-}
-
-\vspace{-0.2em}
-\begin{center}
-  \emph{\small Please refer to my \href{http://www.linkedin.com/in/ciesbreijs}{Linked-in profile} for a more complete list of work experiences along with recommendations.}
-\end{center}
-
-
-\spacedhrule{-0.2em}{-0.4em}
+\pagebreak[4]
 
 \roottitle{Education}
 
 \headedsection
-  {\href{http://www.eur.nl/english}{Erasmus University Rotterdam}}
-  {\textsc{Rotterdam, The Netherlands}} {%
+  {\href{http://www.umd.edu}{University of Maryland}}
+  {\textsc{College Park, MD}} {%
   \headedsubsection
-    {Bachelor degree in Computer Science \& Economics}
-    {2004 -- 2007}
-    {\bodytext{Focused on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).  Picked up quite some Java skills along the way.}}
+    {Master of Science}
+    {2008} 
+    {\bodytext{Doctoral research in Natural Language Processing and Automated Planning}}
 }
 
 \headedsection
-  {\href{http://www.tudelft.nl/en}{Technical University Delft}}
-  {\textsc{Delft, The Netherlands}} {%
+  {\href{https://www.vassar.edu}{Vassar College}}
+  {\textsc{Poughkeepsie, NY}} {%
   \headedsubsection
-    {Industrial Design Engineering \textnormal{\textit{~(discontinued)}}}
-    {2001 -- 2002} {}
+    {Bachelor of Arts}
+    {2002}
+    {\bodytext{Concentration in Computer Science, with a minor in Comparative Religions}}
 }
-
-\headedsection
-  {\href{http://www.libanonlyceum.nl}{Libanon Lyceum}}
-  {\textsc{Rotterdam, The Netherlands}} {%
-  \headedsubsection
-    {\acr{VWO} \textnormal{~(pre-university secondary education)}}
-    {1994 -- 2000} {}
-}
-
 
 \spacedhrule{0.5em}{-0.4em}
 
-\roottitle{Skills}
+\roottitle{Publicly-visible work}
 
-\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Technical expertise:}
-  {Software design and implementation, with(in) a team.  Big fan of Agile methodologies (Scrum and Kanban), automated deployment (Capistrano) and continuous integration (Hudson/Jenkins).  Enjoys writing Ruby/\nsp Python/\nsp Java/\nsp \CPP, yet flirts regularly with Haskell.  Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mostly Angular and jQuery).  Linux administration skills:\ Bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Vagrant, Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef).}
+\headedsection
+  {\href{https://github.com/WhoopInc/dogstatsde}{A statsD client for DataDog}}
+  {2016}
+  {\bodytext{DataDog is a monitoring service that uses statsD with some enhancements. I wrote an Erlang client for their modifications for WHOOP to use in production code. The repository includes scripts to make Travis run tests and automatically publish releases to the Hex package repository.}}
+\headedsection
+  {\href{https://github.com/semiocast/pgsql/pull/24}{COPY support for pgsql}}
+  {2015}
+  {\bodytext{Pgsql is a PostgreSQL client library for Erlang. My patch adds support for PG's \texttt{COPY} command (bulk insert) and includes tests of the new feature and README changes to show people how to use it}}
+\headedsection
+  {\href{https://github.com/curl/curl/pull/351}{--proto-default option for Curl}}
+  {2015}
+  {\bodytext{Curl is a library and command-line tool for talking to URLs. I wanted it to use HTTPS by default, which was \href{http://stackoverflow.com/questions/31479263/can-curl-default-to-using-https}{not possible}, so I wrote a patch and worked with the Curl team to get it approved. My change was released as part of 7.45.0.}}
+\headedsection
+  {Pool-hall challenge for the \href{https://nethack.devnull.net}{/dev/null NetHack Tournament}}
+  {2012}
+  {\bodytext{NetHack is an old terminal-based multiplayer game. /dev/null hosts a yearly tournament with funny extra "challenges" patched into the game code. I wrote patch to the Tournament code adding a puzzle with boulders for pool-balls and holes in the floor for pockets. It's been used in the yearly tournament since 2012.}}
 
-\vspace{0.5em}
-\inlineheadsection
-  {Natural languages:}
-  {Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.}
+\spacedhrule{0.5em}{-0.4em}
 
+\roottitle{Publications}
 
-\spacedhrule{1.6em}{-0.4em}
+{\href{https://www.cs.umd.edu/~nau/papers/gerevini2008combining.pdf}{\textit{Combining Domain-Independent Planning and HTN Planning: The Duet Planner}}. Gerevini, Kuter, Nau, Saetti, and Waisbrot. European Conference on Artificial Intelligence (ECAI), 2008.\\
+\\
+\href{https://www.aaai.org/Papers/FLAIRS/2008/FLAIRS08-131.pdf}{\textit{Combining Heuristic Search with Hierarchical Task-Network Planning}}. Waisbrot and Kuter and K\"{o}nik. Florida Artificial Intelligence Research Society (FLAIRS), 2008.}
 
-\roottitle{Interests}
+\spacedhrule{0.5em}{-0.4em}
 
-\inlineheadsection
-  {Non-exhaustive and in alphabetical order:}
-  {art, Buddhism, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
+\roottitle{Keywords}
+  {Amazon Web Services, Ansible, Bash, C, Continuous Integration, Docker, Emacs, Erlang, Git, Java, JavaScript, Jenkins, Microservices, Perl, Python, Vagrant}
 
 
 \end{document}

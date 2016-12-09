@@ -3,3 +3,4 @@
 *.out
 resume.synctex.gz
 .DS_Store
+*.pdf

@@ -3,7 +3,7 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
-- curl -LO http://mirrors.ctan.org/macros/latex/contrib/xcolor.zip && unzip xcolor.zip && cd xcolor && latex xcolor.ins && sudo mkdir -p /usr/share/texlive/texmf-dist/{tex/latex/xcolor,dvips/xcolor} && sudo cp *.sty *.def /usr/share/texlive/texmf-dist/tex/latex/xcolor/ && sudo cp *.pro /usr/share/texlive/texmf-dist/dvips/xcolor/
+- curl -LO http://mirrors.ctan.org/macros/latex/contrib/xcolor.zip && unzip xcolor.zip && pushd xcolor && latex xcolor.ins && sudo mkdir -p /usr/share/texlive/texmf-dist/{tex/latex/xcolor,dvips/xcolor} && sudo cp *.sty *.def /usr/share/texlive/texmf-dist/tex/latex/xcolor/ && sudo cp *.pro /usr/share/texlive/texmf-dist/dvips/xcolor/ && popd
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error resume.tex
 deploy:

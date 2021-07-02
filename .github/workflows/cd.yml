@@ -60,5 +60,5 @@ jobs:
           tag_name: ${{steps.today.outputs.date}}
           draft: false
           prerelease: false
-          files: resume.tex
+          files: resume.pdf
           fail_on_unmatched_files: true

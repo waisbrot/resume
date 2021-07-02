@@ -35,3 +35,30 @@ jobs:
           #compiler: # optional, default is latexmk
           # Arguments to be passed to the LaTeX engine
           #options: # optional, default is -pdf -cd -file-line-error -halt-on-error -interaction=nonstopmode
+      - name: Get the date
+        uses: lee-dohm/calculate-dates-and-times@v1.0.2
+        id: today
+        with:
+          # An amount and value to add to the current date, _ex:_ `2 days`
+          #add: # optional
+          # A format string correspending to the format function of moment.js
+          format: YYYY-MM-DD
+          # An amount and value to subtract from the current date, _ex:_ `3 weeks`
+          #subtract: # optional
+      - name: Publish
+        # You may pin to the exact commit or the version.
+        # uses: softprops/action-gh-release@b7e450da2a4b4cb4bfbae528f788167786cfcedf
+        uses: softprops/action-gh-release@v0.1.5
+        with:
+          # Note-worthy description of changes in release
+          #body: # optional
+          # Path to load note-worthy description of changes in release from
+          #body_path: # optional
+          # Gives the release a custom name. Defaults to tag name
+          name: ${{steps.today.outputs.date}}
+          # Creates a draft release. Defaults to false
+          draft: false
+          # Identify the release as a prerelease. Defaults to false
+          prerelease: false
+          # Newline-delimited list of path globs for asset files to upload
+          files: resume.tex

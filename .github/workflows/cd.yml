@@ -45,6 +45,15 @@ jobs:
           format: YYYY-MM-DD
           # An amount and value to subtract from the current date, _ex:_ `3 weeks`
           #subtract: # optional
+      - name: Tag
+        uses: tvdias/github-tagger@v0.0.2
+        with:
+          # The GITHUB_TOKEN secret
+          #repo-token: # optional
+          # Tag text
+          tag: ${{steps.today.outputs.date}}
+          # optional commit sha to apply the tag to
+          #commit-sha: # optional          
       - name: Publish
         # You may pin to the exact commit or the version.
         # uses: softprops/action-gh-release@b7e450da2a4b4cb4bfbae528f788167786cfcedf

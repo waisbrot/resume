@@ -27,7 +27,7 @@ jobs:
 
       # Compile latex
       - name: TeXLive PDF
-        uses: waisbrot/texlive@985c8ab
+        uses: waisbrot/texlive@985c8ab40f5373da33c67067ae17746941726ac4
         with:
           # The LaTeX file to be compiled.
           tex_files: resume.tex

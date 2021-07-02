@@ -52,7 +52,7 @@ jobs:
           tag: ${{steps.today.outputs.date}}
           when-tag-exists: overwrite
       - name: Publish
-        uses: softprops/action-gh-release@v0.1.5
+        uses: softprops/action-gh-release@9729932bfb75c05ad1f6e3a729294e05abaa7001
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

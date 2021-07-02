@@ -49,7 +49,7 @@ jobs:
         uses: tvdias/github-tagger@v0.0.2
         with:
           # The GITHUB_TOKEN secret
-          #repo-token: # optional
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           # Tag text
           tag: ${{steps.today.outputs.date}}
           # optional commit sha to apply the tag to

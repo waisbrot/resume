@@ -27,7 +27,7 @@ jobs:
 
       # Compile latex
       - name: TeXLive PDF
-        uses: repaction/texlive@mini-v2
+        uses: waisbrot/texlive@985c8ab
         with:
           # The LaTeX file to be compiled.
           tex_files: resume.tex

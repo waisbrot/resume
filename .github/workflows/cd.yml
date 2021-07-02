@@ -46,7 +46,7 @@ jobs:
           # An amount and value to subtract from the current date, _ex:_ `3 weeks`
           #subtract: # optional
       - name: Tag
-        uses: waisbrot/github-tagger@e6fde160b4a295c63fe1638d0887b2bd78bb8bbc
+        uses: waisbrot/github-tagger@2df07d0289435540cbc9f3ed9fb4b7a6190d522d
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{steps.today.outputs.date}}

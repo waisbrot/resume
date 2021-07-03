@@ -1,6 +1,6 @@
 # Resume for Nathaniel Waisbrot
 
-![Download](https://img.shields.io/badge/dynamic/json.svg?label=download📄&url=https://api.github.com/repos/waisbrot/resume/releases/latest&query=$.assets[0].name&color=informational&style=for-the-badge)
+[Download PDF📄](https://github.com/waisbrot/resume/releases/latest/download/resume.pdf)
 
 # Building
 

@@ -2,13 +2,12 @@
 % LaTeX source of my resume
 % =========================
 %
-% Heavily commented to to fit even LaTeX beginners (hopefully).
+% Heavily commented to fit even LaTeX beginners (hopefully).
 %
 % See the `README.md` file for more info.
 %
 % This file is licensed under the CC-NC-ND Creative Commons license.
 %
-
 
 % Start a document with the here given default font size and paper size.
 \documentclass[10pt,a4paper]{article}
@@ -17,8 +16,7 @@
 \usepackage[a4paper,margin=0.75in]{geometry}
 
 % Setup the language.
-\usepackage[english]{babel}
-\hyphenation{Some-long-word}
+\usepackage[english]{babel} \hyphenation{Some-long-word}
 
 % Makes resume-specific commands available.
 \usepackage{resume}
@@ -33,7 +31,6 @@
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
 % \noindent prevents paragraph's first lines from indenting
-% \mbox is used to obfuscate the email address
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
@@ -47,14 +44,45 @@
 
 \roottitle{Work}
 
+\headedsection
+  {\textbf{\href{https://fitbit.com}{Fitbit}}}
+  {\textsc{San Francisco, California}} {
+    \\Fitness wearables
+    \headedsubsection
+      {Staff Software Engineer, SRE}
+      {2018 -- 2021}
+      {\bodytext{
+        I was the SRE in charge of onboarding a company that Fitbit acquired. I imported the test and production 
+        infrastructure into Terraform (which allowed them to rapidly create and destroy additional test environments). 
+        I helped the team to get alerts under control by working with Product to understand which had customer impact 
+        and which could be safely deleted. I taught the team to manage and review incidents and when I left 
+        they were a model for the rest of the company.
+
+        As part of the main SRE rotation I was on-call for all major incidents and outages at Fitbit, handling problems 
+        that spanned multiple teams and had PR/Legal risk. I kept responders' focus on mitigating the customer impact, 
+        ran post-incident reviews, and gave briefings to executives when incidents ran longer than our goal (15 minutes 
+        to detect, 1 hour to mitigate).
+
+        As part of the main SRE team, I developed software solutions to improve reliability across the organization. 
+        One of my projects was the Deployment Approval Service, which prevented deployment of services that didn't 
+        meet SRE's base standards of reliability. This provided SWE with leverage to address technical debt by giving 
+        an early and visible trade-off to the Product team.
+      }}
+  }
+
 \headedsection  % sets the header for the section and includes any subsections
   {\textbf{\href{https://www.fireeye.com}{FireEye}}}
   {\textsc{Milpitas, California}} {%
   \\Cybersecurity
   \headedsubsection
     {Senior Staff Software Engineer}
-    {December 2016 -- Present}
-    {\bodytext{I work on FireEye Security Orchestrator, a tool for automating security operations. I contribute to all aspects of the orchestration engine, but my primary focus is the API for Python-based plugins to communicate with the Elixir-based engine.}}
+    {2016 -- 2018}
+    {\bodytext{
+      I worked on FireEye Security Orchestrator, a tool for automating security operations. I contributed to all aspects 
+      of the orchestration engine, but my primary focus was the API for Python-based plugins to communicate with the 
+      Elixir-based engine. I built a Python framework to allow community developers to write Python code integrating 
+      their security appliance with our orchestrator, and I wrote Elixir IPC code to communicate with those plugins.
+      }}
     }
 
 \headedsection  % sets the header for the section and includes any subsections
@@ -63,19 +91,32 @@
   \\A wearable and data analysis platform allowing elite athletes to optimize their training schedules.
   \headedsubsection
     {Team Lead}
-    {November 2015 -- December 2016}
-    {\bodytext{Supervised two other full-time software engineers on the back-end team, working with the Product team to prioritize and groom new features. 
+    {2015 -- 2016}
+    {\bodytext{
+      Supervised two other full-time software engineers on the back-end team, working with the Product team to 
+      prioritize and groom new features. 
 
-Managed a summer intern (planned a summer project, lead the hiring process, supervised the project) integrating multiple external services (SalesForce, Shopify, GitHub, etc) with our own internal services.
+      Managed a summer intern (planned a summer project, lead the hiring process, supervised the project) integrating multiple 
+      external services (SalesForce, Shopify, GitHub, etc) with our own internal services.
 
-Architected our transition to Kubernetes (from a hand-managed Ansible/Docker setup) and expanded our use of PostgreSQL.}}
+      Architected and oversaw our transition to Kubernetes (from a hand-managed Ansible/Docker setup) and expanded our 
+      use of PostgreSQL.
+    }}
 
   \headedsubsection
     {Sr Software Engineer}
-    {June 2014 -- November 2015}
-    {\bodytext{Architected and authored most of the server-side services and infrastructure. The WHOOP client apps send frequent bursts of biometric data for near-real-time analysis and send and receive metadata describing users' daily activity and performance. The server is composed of several in-house services (REST server, real-time data processing, slower data processing, time-based actions, etc) and several AWS services (Kinesis, SQS, SNS, RDS PostgreSQL). My work has primarily been in Python, Erlang, and JavaScript.\\
+    {2014 -- 2015}
+    {\bodytext{
+      Architected and authored most of the server-side services and infrastructure. The WHOOP client apps send frequent 
+      bursts of biometric data for near-real-time analysis and send and receive metadata describing users' daily activity 
+      and performance. The server is composed of several in-house services (REST server, real-time data processing, slower 
+      data processing, time-based actions, etc) and several AWS services (Kinesis, SQS, SNS, RDS PostgreSQL). My work was 
+      primarily in Python, Erlang, and JavaScript.\\
 
-Some major technology choices I made: creating a suite of end-to-end tests, discarding Chef as a configuration management system, introducing Docker, introducing Erlang, replacing OpenTSDB with PostgreSQL, introducing Amazon Kinesis.}}
+      Some major technology choices I made: creating a suite of end-to-end tests, discarding Chef as a configuration 
+      management system, introducing Docker, introducing Erlang, replacing OpenTSDB with PostgreSQL, introducing Amazon 
+      Kinesis.
+    }}
 }
 
 \headedsection
@@ -84,8 +125,12 @@ Some major technology choices I made: creating a suite of end-to-end tests, disc
   \\Doctor-facing software for hospitals
   \headedsubsection
     {Sr Software Engineer}
-    {August 2013 -- June 2014}
-    {\bodytext{Back-end engineer for Cortext, a HIPAA-compliant cloud-based messaging system. Designed and wrote the message alert sub-system. Data-mined customer usage. Spearheaded the addition of regression tests, using a local VM to allow the system to be tested with minimal changes to the code-base. Performed auxilary ops tasks on a VPC of 50+ EC2 instances.}}
+    {2013 -- 2014}
+    {\bodytext{
+      Back-end engineer for Cortext, a HIPAA-compliant cloud-based messaging system. Designed and wrote the message alert 
+      sub-system. Data-mined customer usage. Spearheaded the addition of regression tests, using a local VM to allow the 
+      system to be tested with minimal changes to the code-base. Performed auxilary ops tasks on a VPC of 50+ EC2 instances.
+    }}
 }
 
 \headedsection
@@ -94,10 +139,17 @@ Some major technology choices I made: creating a suite of end-to-end tests, disc
   \\Databases with an inference engine
   \headedsubsection
     {Software Engineer}
-    {August 2010 -- August 2013}
-    {\bodytext{Enhanced Highfleet's deductive database system: wrote builtin functions for the logic programming language, improved communication with SQL-based back-ends, debugged query plans, helped write a new ANTLR-based language parser. Part of a very small development team, extremely self- motivated; most weeks consisted of coming up with appropriate enhancement or debugging tasks and then executing those.
+    {2010 -- 2013}
+    {\bodytext{
+      Worked on Highfleet's deductive database system: wrote builtin functions for the logic programming language, improved 
+      communication with SQL-based back-ends, debugged query plans, helped write a new ANTLR-based language parser. 
+      Part of a 4-person development team, extremely self- motivated; most weeks consisted of coming up with appropriate 
+      enhancement or debugging tasks and then executing those.
     
-Primary technical contact for customers: wrote custom GUIs on demand for customers, wrote internal tools to support ontologists, communicated extensively with customers. Sold a key customer a 50\% increase in their contract, then produced software to fulfill the new requirements.}}
+      Primary technical contact for customers: wrote custom GUIs on demand for customers, wrote internal tools to support 
+      ontologists, communicated extensively with customers. Sold a key customer a 50\% increase in their contract, then 
+      produced software to fulfill the new requirements.
+    }}
 }
 
 \headedsection
@@ -105,10 +157,14 @@ Primary technical contact for customers: wrote custom GUIs on demand for custome
   {\textsc{Adelphi, Maryland}} {%
   \headedsubsection
     {Software Engineer}
-    {Feburary 2009 -- August 2010}
-    {\bodytext{Integrated open-source scientific visualization and modeling software packages into a single instal- lation for DoD supercomputer users. Assisted ARL scientists in adapting their code to execute in parallel, for better performance on supercomputers. Updated codes to run on new systems and architectures.
+    {2009 -- 2010}
+    {\bodytext{
+      Integrated open-source scientific visualization and modeling software packages into a single installation for DoD supercomputer 
+      users. Assisted ARL scientists in adapting their code to execute in parallel, for better performance on supercomputers. 
+      Updated codes to run on new systems and architectures.
     
-Granted DoD Top Secret clearance and worked in a classified environment.}}
+      Granted DoD Top Secret clearance and worked in a classified environment.
+    }}
 }
 
 \spacedhrule{0.5em}{-0.4em}

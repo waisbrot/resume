@@ -2,11 +2,7 @@
 % LaTeX source of my resume
 % =========================
 %
-% Heavily commented to fit even LaTeX beginners (hopefully).
-%
-% See the `README.md` file for more info.
-%
-% This file is licensed under the CC-NC-ND Creative Commons license.
+% Created from a LaTeX template by Cies Breijs
 %
 
 % Start a document with the here given default font size and paper size.
@@ -32,7 +28,6 @@
 
 % \noindent prevents paragraph's first lines from indenting
 % \sbull is a spaced bullet
-% \href well..
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:resume@waisbrot.net}{resume@waisbrot.net} \sbull
 \textsmaller{p} 410-369-8043 \sbull
@@ -52,8 +47,23 @@
       {Staff Software Engineer, SWE}
       {2022 -- present}
       {\bodytext{
-        I'm part of a team which is decomposing Fitbit's legacy Java monolith as part of the effort to move it 
+        I'm part of the team which is decomposing Fitbit's legacy Java monolith as part of the effort to move it 
         into Google's internal production systems.
+
+        I hosted a summer intern and coached her through creating a tool to automate the difficult process of
+        releasing the monolith. The internship was a fun and positive experience for everyone and the team
+        continues to use and improve the tool today.
+
+        My team deals with a vast amount of technical debt that we need to triage. I added a requirement that
+        all integration tests needed to pass before the code could be released. This required coordination
+        with all the teams who own code in the monolith. Both before the change, to get as much agreement
+        as possible, and after the change to help the many engineers who were unhappy that they could no longer
+        release code (because tests were failing). I also worked with teams who owned the test code, because
+        in some cases the tests themselves were the source of the bug.
+
+        I made usability improvements to our release automation tool and changed our release process to be
+        self-serve. This allowed many EU-based engineers to get their changes out faster, and also freed
+        my team to do less operational toil and more impactful engineering work.
       }}
     \headedsubsection
       {Staff Software Engineer, SRE}
@@ -247,7 +257,26 @@
 \spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Keywords}
-  {Amazon Web Services, Ansible, Bash, C, Continuous Integration, Docker, Elixir, Emacs, Erlang, Git, Java, JavaScript, Jenkins, Microservices, Perl, PostgreSQL, Python, Vagrant}
+  {
+    Amazon Web Services, 
+    Ansible, 
+    Bash, 
+    C, 
+    Continuous Integration, 
+    Docker, 
+    Elixir, 
+    Emacs, 
+    Erlang, 
+    Git, 
+    Java,
+    JavaScript, 
+    Jenkins, 
+    Microservices, 
+    Perl, 
+    PostgreSQL, 
+    Python,
+    Vagrant
+  }
 
 
 \end{document}

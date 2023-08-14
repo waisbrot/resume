@@ -1,0 +1,6 @@
+{
+    "editor.hover.enabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.lightbulb.enabled": false,
+    "editor.suggest.showWords": false
+}

@@ -4,3 +4,7 @@
 resume.synctex.gz
 .DS_Store
 *.pdf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.tex:*

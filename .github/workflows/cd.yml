@@ -23,20 +23,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # Compile latex
       - name: TeXLive PDF
-        uses: waisbrot/texlive@985c8ab40f5373da33c67067ae17746941726ac4
+        uses: waisbrot/texlive@8619ac5ba97ad7c60c97d5e96459ae03d3f289d7
         with:
-          # The LaTeX file to be compiled.
           tex_files: resume.tex
-          # The LaTeX engine to be invoked.
-          #compiler: # optional, default is latexmk
-          # Arguments to be passed to the LaTeX engine
-          #options: # optional, default is -pdf -cd -file-line-error -halt-on-error -interaction=nonstopmode
       - name: Get the date
-        uses: lee-dohm/calculate-dates-and-times@v1.0.2
+        uses: waisbrot/calculate-dates-and-times@30dc0cb86f8b9414c7c791b2fbe1d3a5f82ca7ab
         id: today
         with:
           # An amount and value to add to the current date, _ex:_ `2 days`
@@ -46,13 +41,13 @@ jobs:
           # An amount and value to subtract from the current date, _ex:_ `3 weeks`
           #subtract: # optional
       - name: Tag
-        uses: waisbrot/github-tagger@2df07d0289435540cbc9f3ed9fb4b7a6190d522d
+        uses: waisbrot/github-tagger@216da510f7ea32ce5ae5a4f1ac38731263be9a8e
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{steps.today.outputs.date}}
           when-tag-exists: overwrite
       - name: Publish
-        uses: softprops/action-gh-release@9729932bfb75c05ad1f6e3a729294e05abaa7001
+        uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

@@ -38,7 +38,6 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{steps.today.outputs.date}}
-          when-tag-exists: overwrite
       - name: Publish
         uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
         env:

@@ -31,15 +31,8 @@ jobs:
         with:
           tex_files: resume.tex
       - name: Get the date
-        uses: waisbrot/calculate-dates-and-times@30dc0cb86f8b9414c7c791b2fbe1d3a5f82ca7ab
         id: today
-        with:
-          # An amount and value to add to the current date, _ex:_ `2 days`
-          #add: # optional
-          # A format string correspending to the format function of moment.js
-          format: YYYY-MM-DD
-          # An amount and value to subtract from the current date, _ex:_ `3 weeks`
-          #subtract: # optional
+        run: date --iso-8601=minutes
       - name: Tag
         uses: waisbrot/github-tagger@216da510f7ea32ce5ae5a4f1ac38731263be9a8e
         with:

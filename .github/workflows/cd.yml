@@ -34,10 +34,10 @@ jobs:
         id: today
         run: date --iso-8601=minutes
       - name: Tag
-        uses: waisbrot/github-tagger@216da510f7ea32ce5ae5a4f1ac38731263be9a8e
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{steps.today.outputs.date}}
+        uses: anothrNick/github-tag-action@1.64.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_TAG: ${{steps.today.outputs.date}}
       - name: Publish
         uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
         env:
